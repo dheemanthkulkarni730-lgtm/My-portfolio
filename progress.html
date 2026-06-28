@@ -3,28 +3,42 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Workout Timer</title>
+<title>Progress Tracker</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-<h1>⏱ Workout Timer</h1>
-<p>Stay Focused • Stay Strong</p>
+<h1>📈 Progress Tracker</h1>
+<p>Track Your Fitness Journey</p>
 </header>
 
 <section>
 
-<h2>Workout Countdown</h2>
+<h2>Enter Your Progress</h2>
 
-<h1 id="timer">60</h1>
+<label>Date</label><br><br>
+<input type="date" id="date"><br><br>
 
-<button onclick="startTimer()">▶️ Start</button>
+<label>Current Weight (kg)</label><br><br>
+<input type="number" id="weight" placeholder="Enter Weight"><br><br>
 
-<button onclick="pauseTimer()">⏸ Pause</button>
+<label>Chest (cm)</label><br><br>
+<input type="number" id="chest" placeholder="Chest Measurement"><br><br>
 
-<button onclick="resetTimer()">🔄 Reset</button>
+<label>Waist (cm)</label><br><br>
+<input type="number" id="waist" placeholder="Waist Measurement"><br><br>
+
+<label>Arms (cm)</label><br><br>
+<input type="number" id="arms" placeholder="Arm Measurement"><br><br>
+
+<label>Thighs (cm)</label><br><br>
+<input type="number" id="thighs" placeholder="Thigh Measurement"><br><br>
+
+<button onclick="saveProgress()">Save Progress</button>
+
+<h2 id="result"></h2>
 
 </section>
 
@@ -38,53 +52,25 @@
 
 <script>
 
-let time = 60;
-let timer;
-let running = false;
+function saveProgress(){
 
-function updateDisplay(){
-document.getElementById("timer").innerHTML = time + " sec";
-}
+let date=document.getElementById("date").value;
+let weight=document.getElementById("weight").value;
+let chest=document.getElementById("chest").value;
+let waist=document.getElementById("waist").value;
+let arms=document.getElementById("arms").value;
+let thighs=document.getElementById("thighs").value;
 
-function startTimer(){
-
-if(running) return;
-
-running = true;
-
-timer = setInterval(function(){
-
-if(time > 0){
-time--;
-updateDisplay();
-}
-else{
-clearInterval(timer);
-running = false;
-alert("🎉 Time's Up! Great Job!");
-}
-
-},1000);
+document.getElementById("result").innerHTML=
+"<h3>✅ Progress Saved</h3>" +
+"<p><strong>Date:</strong> "+date+"</p>" +
+"<p><strong>Weight:</strong> "+weight+" kg</p>" +
+"<p><strong>Chest:</strong> "+chest+" cm</p>" +
+"<p><strong>Waist:</strong> "+waist+" cm</p>" +
+"<p><strong>Arms:</strong> "+arms+" cm</p>" +
+"<p><strong>Thighs:</strong> "+thighs+" cm</p>";
 
 }
-
-function pauseTimer(){
-
-clearInterval(timer);
-running = false;
-
-}
-
-function resetTimer(){
-
-clearInterval(timer);
-running = false;
-time = 60;
-updateDisplay();
-
-}
-
-updateDisplay();
 
 </script>
 
