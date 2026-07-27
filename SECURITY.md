@@ -2,20 +2,27 @@
 
 ## Supported Versions
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
-
-| Version | Supported          |
-| ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
+| Version | Supported |
+|---------|-----------|
+| Latest | ✅ Yes |
 
 ## Reporting a Vulnerability
 
-Use this section to tell people how to report a vulnerability.
+If you discover a security vulnerability or security-related issue in this website, please report it by email.
 
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+📧 **Email:** dheemanthkulkarni730@gmail.com
+
+Please include:
+- A description of the issue
+- Steps to reproduce it
+- Any screenshots or relevant details
+
+I will review your report and respond as soon as possible.
+
+## Contact & Feedback
+
+If you have any questions, suggestions, feedback, or would like to get in touch, feel free to contact me.
+
+📧 **Email:** dheemanthkulkarni730@gmail.com
+
+Your feedback is always appreciated and helps improve this website. Thank you for visiting!
